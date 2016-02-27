@@ -17,11 +17,12 @@ namespace NOISSystem.Forms
 
         private void TaxiServiceButton_Click(object sender, EventArgs e)
         {
+            var taxiPlaces = BurgasService.Taxis();
 
-            var taxiForm = new TaxiForm();
+            var taxiForm = new TaxiForm(taxiPlaces);
             taxiForm.Show();
 
-            var taxis = BurgasService.Taxis();
+            
 
         }
     }

@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.taxiGridView = new DevExpress.XtraGrid.GridControl();
             this.locationView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.Локация = new DevExpress.XtraGrid.Columns.GridColumn();
             this.taxiGrid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.number = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Локация = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taxiGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,48 +47,59 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // gridControl1
+            // taxiGridView
             // 
-            this.gridControl1.Location = new System.Drawing.Point(481, 12);
-            this.gridControl1.MainView = this.locationView;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(285, 388);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.taxiGridView.Location = new System.Drawing.Point(481, 12);
+            this.taxiGridView.MainView = this.locationView;
+            this.taxiGridView.Name = "taxiGridView";
+            this.taxiGridView.Size = new System.Drawing.Size(285, 388);
+            this.taxiGridView.TabIndex = 1;
+            this.taxiGridView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.locationView});
             // 
             // locationView
             // 
             this.locationView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.taxiGrid});
-            this.locationView.GridControl = this.gridControl1;
+            this.taxiGrid,
+            this.number});
+            this.locationView.GridControl = this.taxiGridView;
             this.locationView.Name = "locationView";
+            // 
+            // taxiGrid
+            // 
+            this.taxiGrid.Caption = "Локация";
+            this.taxiGrid.FieldName = "title";
+            this.taxiGrid.Name = "taxiGrid";
+            this.taxiGrid.Visible = true;
+            this.taxiGrid.VisibleIndex = 1;
+            this.taxiGrid.Width = 225;
+            // 
+            // number
+            // 
+            this.number.Caption = "Номер";
+            this.number.Name = "number";
+            this.number.Visible = true;
+            this.number.VisibleIndex = 0;
+            this.number.Width = 39;
             // 
             // Локация
             // 
             this.Локация.Caption = "gridColumn1";
             this.Локация.Name = "Локация";
             // 
-            // taxiGrid
-            // 
-            this.taxiGrid.Caption = "Локация";
-            this.taxiGrid.Name = "taxiGrid";
-            this.taxiGrid.Visible = true;
-            this.taxiGrid.VisibleIndex = 0;
-            // 
             // TaxiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 412);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.taxiGridView);
             this.Controls.Add(this.pictureBox1);
             this.LookAndFeel.SkinName = "Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "TaxiForm";
             this.Text = "TaxiForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taxiGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locationView)).EndInit();
             this.ResumeLayout(false);
 
@@ -96,9 +108,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl taxiGridView;
         private DevExpress.XtraGrid.Views.Grid.GridView locationView;
         private DevExpress.XtraGrid.Columns.GridColumn taxiGrid;
         private DevExpress.XtraGrid.Columns.GridColumn Локация;
+        private DevExpress.XtraGrid.Columns.GridColumn number;
     }
 }
