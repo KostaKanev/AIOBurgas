@@ -60,6 +60,9 @@
     <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraSpreadsheet.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="GoogleMapsApi">
+      <HintPath>C:\Users\Kosta\Desktop\GoogleMapsApi.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -82,6 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBaseConnector.cs" />
     <Compile Include="Forms\BlueZoneForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +105,13 @@
     <Compile Include="Forms\TaxiForm.Designer.cs">
       <DependentUpon>TaxiForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TrainTransportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrainTransportForm.Designer.cs">
+      <DependentUpon>TrainTransportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Venue.cs" />
     <Compile Include="Models\Taxi.cs" />
     <Compile Include="Models\Train.cs" />
     <Compile Include="AIOMain.cs" />
@@ -117,6 +128,8 @@
     <Compile Include="Forms\TransportForm.Designer.cs">
       <DependentUpon>TransportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Updaters\ImageParameters.cs" />
+    <Compile Include="Updaters\ImageUpdater.cs" />
     <EmbeddedResource Include="Forms\BlueZoneForm.resx">
       <DependentUpon>BlueZoneForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TaxiForm.resx">
       <DependentUpon>TaxiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrainTransportForm.resx">
+      <DependentUpon>TrainTransportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

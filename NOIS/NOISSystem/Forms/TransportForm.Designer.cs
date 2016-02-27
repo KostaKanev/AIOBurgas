@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.trainTransport = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
-            // simpleButton1
+            // trainTransport
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 14F);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(12, 12);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(119, 113);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "Железопътен\r\nТранспорт";
+            this.trainTransport.Appearance.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.trainTransport.Appearance.Options.UseFont = true;
+            this.trainTransport.Location = new System.Drawing.Point(12, 12);
+            this.trainTransport.Name = "trainTransport";
+            this.trainTransport.Size = new System.Drawing.Size(119, 113);
+            this.trainTransport.TabIndex = 0;
+            this.trainTransport.Text = "Железопътен\r\nТранспорт";
+            this.trainTransport.Click += new System.EventHandler(this.TrainTransport_Click);
             // 
             // simpleButton2
             // 
@@ -70,7 +71,7 @@
             this.ClientSize = new System.Drawing.Size(396, 140);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.trainTransport);
             this.LookAndFeel.SkinName = "Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "TransportForm";
@@ -81,7 +82,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton trainTransport;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
     }
