@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.publicServicesButton = new DevExpress.XtraEditors.SimpleButton();
             this.transportButton = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
@@ -36,9 +37,9 @@
             // 
             this.publicServicesButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.publicServicesButton.Appearance.Options.UseFont = true;
-            this.publicServicesButton.Location = new System.Drawing.Point(126, 77);
+            this.publicServicesButton.Location = new System.Drawing.Point(9, 103);
             this.publicServicesButton.Name = "publicServicesButton";
-            this.publicServicesButton.Size = new System.Drawing.Size(176, 110);
+            this.publicServicesButton.Size = new System.Drawing.Size(196, 110);
             this.publicServicesButton.TabIndex = 6;
             this.publicServicesButton.Text = "Обществени\r\nУслуги";
             this.publicServicesButton.Click += new System.EventHandler(this.publicServicesButton_Click);
@@ -47,23 +48,30 @@
             // 
             this.transportButton.Appearance.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transportButton.Appearance.Options.UseFont = true;
-            this.transportButton.Location = new System.Drawing.Point(323, 77);
+            this.transportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.transportButton.Location = new System.Drawing.Point(239, 103);
             this.transportButton.Name = "transportButton";
-            this.transportButton.Size = new System.Drawing.Size(176, 110);
+            this.transportButton.Size = new System.Drawing.Size(196, 110);
             this.transportButton.TabIndex = 7;
             this.transportButton.Text = "Транспорт";
             this.transportButton.Click += new System.EventHandler(this.TransportButton_Click);
             // 
             // MainForm
             // 
+            this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 281);
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
+            this.ClientSize = new System.Drawing.Size(447, 493);
             this.Controls.Add(this.transportButton);
             this.Controls.Add(this.publicServicesButton);
+            this.DoubleBuffered = true;
             this.LookAndFeel.SkinName = "Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AIOBurgas";
             this.ResumeLayout(false);
 

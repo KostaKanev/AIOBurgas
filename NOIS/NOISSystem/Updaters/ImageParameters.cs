@@ -13,6 +13,7 @@ namespace NOISSystem.Updaters
             this.locationsLongLat = locationsLongLat;
             this.label = label;
         }
+
         public string label;
         public Tuple<string, string> centerLocation;
         public int zoom;

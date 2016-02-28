@@ -32,7 +32,6 @@
             this.taxiGridView = new DevExpress.XtraGrid.GridControl();
             this.locationView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.taxiGrid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.number = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Локация = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taxiGridView)).BeginInit();
@@ -60,8 +59,7 @@
             // locationView
             // 
             this.locationView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.taxiGrid,
-            this.number});
+            this.taxiGrid});
             this.locationView.GridControl = this.taxiGridView;
             this.locationView.Name = "locationView";
             // 
@@ -71,16 +69,8 @@
             this.taxiGrid.FieldName = "title";
             this.taxiGrid.Name = "taxiGrid";
             this.taxiGrid.Visible = true;
-            this.taxiGrid.VisibleIndex = 1;
+            this.taxiGrid.VisibleIndex = 0;
             this.taxiGrid.Width = 225;
-            // 
-            // number
-            // 
-            this.number.Caption = "Номер";
-            this.number.Name = "number";
-            this.number.Visible = true;
-            this.number.VisibleIndex = 0;
-            this.number.Width = 39;
             // 
             // Локация
             // 
@@ -89,6 +79,8 @@
             // 
             // TaxiForm
             // 
+            this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 412);
@@ -97,6 +89,7 @@
             this.LookAndFeel.SkinName = "Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "TaxiForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TaxiForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taxiGridView)).EndInit();
@@ -112,6 +105,5 @@
         private DevExpress.XtraGrid.Views.Grid.GridView locationView;
         private DevExpress.XtraGrid.Columns.GridColumn taxiGrid;
         private DevExpress.XtraGrid.Columns.GridColumn Локация;
-        private DevExpress.XtraGrid.Columns.GridColumn number;
     }
 }

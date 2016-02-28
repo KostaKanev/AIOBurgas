@@ -50,13 +50,13 @@
         //    return JsonConvert.DeserializeObject<List<VenueTypes>>(json);
         //}
         //
-        public static List<Venue> Accommodations(string typeId)
-        {
-            string url = "http://api.travelburgas.eu/accommodation/" + typeId;
-            string json = GetData(url);
-            return JsonConvert.DeserializeObject<List<Venue>>(json);
-        }
-        
+        //public static List<Venue> Accommodations(string typeId)
+        //{
+        //    string url = "http://api.travelburgas.eu/accommodation/" + typeId;
+        //    string json = GetData(url);
+        //    return JsonConvert.DeserializeObject<List<Venue>>(json);
+        //}
+        //
         //public static VenueDetails AccommodationDetails(string typeId, string id)
         //{
         //    string url = "http://api.travelburgas.eu/accommodation/" + typeId + "/" + id;
